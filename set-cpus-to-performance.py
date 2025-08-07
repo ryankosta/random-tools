@@ -1,6 +1,6 @@
 #!/bin/env python3
 import os
-NUM_CPU=96 #TODO make dynamic
+NUM_CPU=os.cpu_count()
 def get_scaling_dir(cpunum:int):
     return f"/sys/devices/system/cpu/cpu{cpunum}/cpufreq/scaling_governor"
 def check_setup():
